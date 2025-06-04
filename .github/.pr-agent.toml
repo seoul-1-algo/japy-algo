@@ -4,21 +4,12 @@ response_language = "ko-KR"
 
 [github_app]
 # PR이 생성되면 자동으로 실행되는 도구들들
-pr_commands = [
-  "/describe",
-  "/review",
-  "/improve",
-  
-]
+pr_commands = ["/describe", "/review", "/improve"]
 # 초안 PR 생성 관련 설정
 feedback_on_draft_pr = true
 # 열려있는 PR에 푸시된 새 코드도 반영할 수 있도록 설정
 handle_push_trigger = true
-push_commands = [
-  "/describe",
-  "/review",
-  "/improve",
-]
+push_commands = ["/describe", "/review", "/improve"]
 
 [pr_description]
 # 사용자 콘텐츠와 pr-agent가 자동 생성한 콘텐츠 통합
