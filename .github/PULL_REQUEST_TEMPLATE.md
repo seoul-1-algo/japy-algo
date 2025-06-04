@@ -1,7 +1,10 @@
 ## ✅ PR 요약
+pr_agent:type
 pr_agent:summary
 
 ## 🔍 문제별 풀이 현황
+
+pr_agent:walkthrough
 
 ### 문제 1: [문제 제목]
 
