@@ -13,4 +13,6 @@ push_commands = ["/describe", "/review", "/improve"]
 
 [pr_description]
 # 사용자 콘텐츠와 pr-agent가 자동 생성한 콘텐츠 통합
-use_description_markers=true
+use_description_markers = true
+add_original_user_description = true
+publish_description_as_comment = false
