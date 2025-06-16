@@ -19,6 +19,8 @@
 <td align="center"><img src='https://avatars.githubusercontent.com/u/148981647?v=4' alt='김민지' width="100"><br><strong>김민지👑</strong>
 <td align="center"><img src='https://avatars.githubusercontent.com/u/175283788?v=4' alt='이다이' width="100"><br><strong>이다이</strong>
 <td align="center"><img src='https://avatars.githubusercontent.com/u/175284278?v=4' alt='여현승' width="100"><br><strong>여현승</strong>
+  <td align="center"><img src='https://avatars.githubusercontent.com/u/175171052?v=4' alt='송경민' width="100"><br><strong>송경민</strong>
+    <td align="center"><img src='https://avatars.githubusercontent.com/u/75923015?v=4' alt='김재준' width="100"><br><strong>김재준</strong>
 </tr>
 </table>
 
