@@ -1,20 +1,14 @@
 n = int(input())
-graph = [list(map(int, input().split())) for _ in range(n)]
+dp_max = [0, 0, 0]  # 최대값 dp
+dp_min = [10e6, 10e6, 10e6]     # 최소값 dp
 
-dp_max = [[0, 0, 0] for _ in range(n)]  # 최대값 dp
-dp_min = [[10e6, 10e6, 10e6] for _ in range(n)]     # 최소값 dp
 
 for i in range(n):
+    row = list(map(int, input().split()))
     if i == 0:
-        dp_max[i] = graph[i]
-        dp_min[i] = graph[i]
+        dp_max, dp_min = row, row
     else:
-        dp_max[i][0] = graph[i][0] + max(dp_max[i - 1][0], dp_max[i - 1][1])
-        dp_max[i][1] = graph[i][1] + max(dp_max[i - 1])
-        dp_max[i][2] = graph[i][2] + max(dp_max[i - 1][1], dp_max[i - 1][2])
+        dp_max = [row[0] + max(dp_max[0], dp_max[1]), row[1] + max(dp_max), row[2] + max(dp_max[1], dp_max[2])]
+        dp_min = [row[0] + min(dp_min[0], dp_min[1]), row[1] + min(dp_min), row[2] + min(dp_min[1], dp_min[2])]
 
-        dp_min[i][0] = graph[i][0] + min(dp_min[i - 1][0], dp_min[i - 1][1])
-        dp_min[i][1] = graph[i][1] + min(dp_min[i - 1])
-        dp_min[i][2] = graph[i][2] + min(dp_min[i - 1][1], dp_min[i - 1][2])
-
-print(max(dp_max[-1]), min(dp_min[-1]))
+print(max(dp_max), min(dp_min))
