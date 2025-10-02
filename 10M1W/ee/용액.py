@@ -7,7 +7,7 @@ liquids = list(map(int, input().split())) # 용액
 front = 0
 rear = N-1
 
-min_val = 1e9
+min_val = 1e12
 ans = [front, rear]
 
 while front < rear:
