@@ -16,6 +16,7 @@ for i in range(n):
 shark_size = 2
 hungry = 2
 
+#위,왼쪽,오른쪽,아래
 dx = [1,0,0,-1]
 dy = [0,-1,1,0]
 t = 0
@@ -28,6 +29,7 @@ while now:
     now_shark = now.popleft()
     shark_i, shark_j,now_t = now_shark[0], now_shark[1], now_shark[2]
     
+    # 먹을 수 있는 상태면
     if sea[shark_i][shark_j] != 0 and sea[shark_i][shark_j] < shark_size:
         hungry-=1
         sea[shark_i][shark_j] = 0
@@ -40,7 +42,7 @@ while now:
         visited[shark_i][shark_j] = True
         now = deque([[shark_i, shark_j, 0]])
         continue
-
+    
     for i in range(4):
         #유효한 칸인지 확인
         if 0<= shark_i+dx[i] < n and 0<=shark_j+dy[i]<n:
