@@ -30,14 +30,14 @@ start = players[:] # 처음 상태
 ans = 0 # 섞은 횟수 
 while True:
     # 종료 조건
-    if check(cards):
+    if check(players):
         print(ans)
         break
 
-    if ans > 0 and cards == start: # 한 번 이상 섞었고, 다시 처음 상태로 돌아온 경우
+    if ans > 0 and players == start: # 한 번 이상 섞었고, 다시 처음 상태로 돌아온 경우
         print(-1)
         break
 
     # 다르면 섞는다
-    cards = move(cards)
+    players = move(players)
     ans += 1
